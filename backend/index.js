@@ -13,8 +13,7 @@ app.use(express.json());
 app.use(cors({
     origin: [
         'http://localhost:5173',
-        'https://ticket-reservation-system-beryl.vercel.app',
-        'https://ticket-reservation-system-b6w7.onrender.com'
+        process.env.FRONTEND_URL,
     ],
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
     credentials: true,
