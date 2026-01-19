@@ -11,11 +11,14 @@ const app = express();
 app.use(express.json());
 
 app.use(cors({
-    origin:['http://localhost:5173','https://ticket-reservation-system-b6w7.onrender.com'],
-    methods:['GET','POST','PUT','DELETE'],
-    credentials:true,
-}
-));
+    origin: [
+        'http://localhost:5173',
+        'https://ticket-reservation-system-beryl.vercel.app',
+        'https://ticket-reservation-system-b6w7.onrender.com'
+    ],
+    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+    credentials: true,
+}));
 
 // Health check route
 app.get('/', (req, res) => {
